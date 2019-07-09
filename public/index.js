@@ -1,47 +1,34 @@
-const myInput = document.getElementById('myInput');
-const keyList = document.getElementById('keyList');
-const codeList = document.getElementById('codeList');
-const whichList = document.getElementById('whichList');
-const button = document.getElementById('buttonReset');
+const button = document.getElementById('button')
+const input = document.getElementById('input')
+const message1 = document.getElementById("message1")
+const message2 = document.getElementById("message2")
 
-myInput.addEventListener('input',() => {
-   
-    let listKey = document.createElement('li');
-    let listCode = document.createElement('li');
-    
-    
-    listKey.textContent = myInput.value;
-    keyList.appendChild(listKey)
+document.getElementById('button').addEventListener('click', () => {
+    console.log('clicked')
+    const location = input.value
+    message1.textContent = 'Loading...'
+    message2.textContent = ''
 
-    listCode.textContent = `Key: ${myInput.value.toUpperCase()}`
-    codeList.appendChild(listCode)
-    
+    fetch(`/weather?address=${location}`).then((response) => {
+        response.json().then((data) => {
+            if (data.error) {
+                message1.textContent = data.error
+            } else {
+                message1.textContent = data.location
+                message2.textContent = data.forecast
+            }
+            for (let i = 0; i < message2.textContent; i++) {
+                if (message2.textContent[i] === "sunny" || "clear") {
+                    document.getElementById('weatherimg').src = "http://www.sclance.com/pngs/sun-png/sun_png_1330824.png"
+                }
+            }
+        })
+    })
+
+
 })
 
 
-document.addEventListener('keypress', () => {
-
-    let listWhich = document.createElement('li');
-    listWhich.textContent = event.keyCode;
-    whichList.appendChild(listWhich)
-})
 
 
-const removeFromList = () => {
-    // keyList.removeChild(keyList.childNodes[0]);
-    // codeList.removeChild(codeList.childNodes[0]);
-    // whichList.removeChild(whichList.childNodes[0]);
-    
-    keyList.innerHTML = "";
-    codeList.innerHTML = "";
-    whichList.innerHTML = "";
-}
-button.onclick = function() {
-    removeFromList();
-}
-
-let liList = document.getElementById('listKey').getElementsByTagName('li');
-let liGo = liList.length;
-if (liGo >= [3]) {
-    removeFromList()
-}
+// let playerName = document.getElementById('spInput').textContent

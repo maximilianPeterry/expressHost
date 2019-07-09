@@ -5,63 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Bangers|Luckiest+Guy|Patrick+Hand&display=swap');
+    </style>
     <title>Document</title>
 </head>
 
-<body id="content">
-    <nav id="navContainer">
-        <h1>Keycode Generator</h1>
-
-
+<body>
+    <nav id="nav">
+        <h1 class="webname">Weather App</h1>
     </nav>
-    <div id="intro">
-        <h1>
-            Try it.
-        </h1>
-        <p>Choose any letter, number, symbol or "Enter", hit it in the feild, see what you get back.</p>
-    </div>
-
-    <div id="pageLogo">
-        <img id="codeIm" src="codeLogo.jpg">
-        <img id="keyImg" src="keyImage.png">
-        <!-- //resize// -->
-    </div>
-
-    <div id="inputArea">
-        <!-- //Would like to reset field after each key press.// -->
-        <input id="myInput" type="text">
-        <!-- //Must reset eventlogs upon click.// -->
-        <button onclick="removeFromList" id="buttonReset">Reset</button>
-
-    </div>
-
-    <div id="codeContainer">
-        <div id="key" class="lis">
-            <h2>key</h2>
-            <ul id="keyList">
-                <!-- <li></li> -->
-            </ul>
+    <div class='container'>
+        <div class="field">
+            <div id="shadow">
+                <input id="input" type="text">
+                <button id="button">button</button>
+            </div>
         </div>
-
-        <div id="code">
-            <h2>code</h2>
-            <ul id="codeList">
-                <!-- <li></li> -->
-            </ul>
+        <div class="messages">
+            <p id="message1"></p>
+            <img id="weatherimg" src="">
+            <p id="message2"></p>
         </div>
-
-        <div id="which">
-            <h2>which</h2>
-            <ul id="whichList">
-                <!-- <li></li> -->
-            </ul>
-        </div>
-
     </div>
-    <footer id="foot">
-        <p>By Maximilian Riley</p>
-    </footer>
+
     <script src="index.js"></script>
 </body>
 

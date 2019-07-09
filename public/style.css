@@ -1,111 +1,59 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Press+Start+2P&display=swap');
-
-#navContainer {
+.container {
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    font-family: 'Press Start 2P', cursive;
+    flex-direction: column;
 }
-#intro {
+
+#nav {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav h1 {
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(89, 89, 237);
+    font-size: 40px;
+}
+
+.messages {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Anton', sans-serif;
-    margin-top: 80px;
-    margin-bottom: 30px;
+
 }
 
-h1 {
-    margin: 10px;
-}
-p {
-    margin-bottom: 10px;
-    margin-top: 0px;
+#message1 {
+    font-family: 'Patrick Hand', cursive;
 }
 
-#pageLogo {
-    background-color: white;
+#message2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3vh;
+
+}
+
+.field {
+    background-color: aliceblue;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-}
-#codeIm {
-    height: 100px;
-    width: 80px;
-    margin-top: 80px;
-}
-#keyImg {
-    height: 200px;
-    
-}
-
-#inputArea {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-input[type=text] {
-    background-color: thistle;
-    color: gray;
-    border: thistle;
-}
-
-#buttonReset {
-    background-color: white;
-    display: flex;
-    border: none;
-    font-family: 'Anton', sans-serif;
-}
-
-#codeContainer {
-    display:  flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    
-}
-
-#key {
-    background-color: white;
-    height: 100%;
-    font-family: 'Press Start 2P', cursive;
-    padding-left: 10px;
-    padding-right: 10px; 
-}
-#keyList {
-    font-family: 'Anton', sans-serif;
-}
-
-#code {
-    background-color: white;
-    height: 100%;
-    font-family: 'Press Start 2P', cursive;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-#codeList {
-    font-family: 'Anton', sans-serif;
-}
-
-#which {
-    background-color: white;
-    height: 100%;
-    font-family: 'Press Start 2P', cursive;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-#whichList {
-    font-family: 'Anton', sans-serif;
-}
-
-
-#foot {
-    height: 50px;
-    background-color: antiquewhite;
-    display: flex;
-    margin-top: 20%;
-    font-family: 'Press Start 2P', cursive;
+    flex-direction: column;
+    width: 100%;
+    height: 10vh;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
 }
+
+/* #shadow {
+    background-color: rgb(81, 81, 232);
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+} */
