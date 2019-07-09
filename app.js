@@ -5,6 +5,7 @@ const forecast = require('./forecast')
 const colors = require('colors')
 
 const app = express()
+const port = process.env.PORT || 3000;
 
 const publicDirectory = path.join(__dirname, './public')
 
