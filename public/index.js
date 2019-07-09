@@ -17,11 +17,11 @@ document.getElementById('button').addEventListener('click', () => {
                 message1.textContent = data.location
                 message2.textContent = data.forecast
             }
-            for (let i = 0; i < message2.textContent; i++) {
-                if (message2.textContent[i] === "sunny" || "clear") {
-                    document.getElementById('weatherimg').src = "http://www.sclance.com/pngs/sun-png/sun_png_1330824.png"
-                }
-            }
+            // for (let i = 0; i < message2.textContent; i++) {
+            //     if (message2.textContent[i] === "sunny" || "clear") {
+            //         document.getElementById('weatherimg').src = "http://www.sclance.com/pngs/sun-png/sun_png_1330824.png"
+            //     }
+            // }
         })
     })
 
